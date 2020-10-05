@@ -97,7 +97,7 @@ def minimal_clean(df, end={'year': 2020, 'round': 12}):
 
     df.drop(df[df['atletas.clube_id'].isna()].index, inplace=True)
     df.fillna(0, inplace=True)
-    events = ['FC', 'FD', 'FF', 'FS', 'G', 'I', 'RB', 'CA', 'PE',
+    events = ['atletas.media_num', 'FC', 'FD', 'FF', 'FS', 'G', 'I', 'RB', 'CA', 'PE',
               'A', 'SG', 'DD', 'FT', 'GS', 'CV', 'GC', 'DP', 'PP', 'PI', 'DS']
     df.func_in_player_year(events, calculate_stat_before_round)
     df['events_count'] = df[events].sum(axis=1)
