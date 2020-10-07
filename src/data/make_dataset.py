@@ -2,6 +2,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from .features import build_features
 
 
 def calculate_stat_before_round(df, stats):
