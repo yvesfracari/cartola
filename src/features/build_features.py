@@ -1,3 +1,5 @@
+import pandas as pd
+
 def player_until_round(row, df):
     year_serie = df['year'] == row['year']
     player_serie = df['atletas.atleta_id'] == row['atletas.atleta_id']
